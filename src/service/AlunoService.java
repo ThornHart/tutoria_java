@@ -23,7 +23,7 @@ public class AlunoService {
 			aluno.setDataCadastro(new SimpleDateFormat("dd.MM.yyyy").format(new Date()));
 			alunoDAO.adicionarBanco(aluno);
 		} else {
-			System.out.println("Verifique os dados cadastrados. O nome do aluno, nome da m„e e data de nascimento s„o obrigatÛrios!");
+			System.out.println("Verifique os dados cadastrados. O nome do aluno, nome da m√£e e data de nascimento s√£o obrigat√≥rios!");
 		}
 
 		return null;
@@ -35,5 +35,8 @@ public class AlunoService {
 
 	public List<Aluno> listaAlunoPorId(String id) {
 		return alunoDAO.selectAlunoPorId(id);
+	}
+	public atualizaAluno() {
+		return alunoDAO.atualizarAlunos();
 	}
 }
