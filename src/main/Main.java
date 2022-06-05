@@ -43,13 +43,24 @@ public class Main {
 				break;
 			case "4":
 				limpaTela();
+				atualizaAlunos();
+				pressioneQualquerTecla();	
+				break;	
+			case "5":
+				limpaTela();
+				deletaAlunos();
+				pressioneQualquerTecla();
+				break;
+			case "6":
+				limpaTela();
 				System.out.println("Tchau... :)");
 				pressioneQualquerTecla();
 				continuar = false;
 				break;
+					
 			default:
 				limpaTela();
-				System.out.println("Por favor, selecione uma opÁ„o v·lida.");
+				System.out.println("Por favor, selecione uma op√ß√£o v√°lida.");
 				pressioneQualquerTecla();
 				break;
 			}
@@ -61,11 +72,13 @@ public class Main {
 	}
 
 	private static void exibeMenu() {
-		System.out.println("Bem vindo, por favor digite uma opÁ„o v·lida: ");
+		System.out.println("Bem vindo, por favor digite uma op√ß√£o v√°lida: ");
 		System.out.println("1 - Cadastrar aluno");
 		System.out.println("2 - Listar alunos");
 		System.out.println("3 - Buscar aluno por id");
-		System.out.println("4 - Sair");
+		System.out.println("4 - Atualizar aluno");
+		System.out.println("5 - Deletar aluno");
+		System.out.println("6 - sair");
 	}
 
 	private static void adicionarAluno() {
@@ -114,6 +127,11 @@ public class Main {
 			System.out.println();
 		}
 	}
+	private static void atualizaAlunos() {
+		Aluno aluno = new Aluno();
+		alunoService.atualizaAluno(aluno);
+	}
+	
 	
 	private static void limpaTela() {
 		for (int i = 0; i < 100; i++) {
